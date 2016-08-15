@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="fileUpload">
 <head>
-	<meta charset="UTF-8">
-	<title>Process.st</title>
+    <meta charset="UTF-8">
+    <title>Process.st</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body ng-controller="fileUploadCtrl">
-	<div>
-		{{message}}
-	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="./lib/angular.min.js"></script>
-	<script src="./lib/jquery.iframe-transport.js"></script>
-	<script src="./lib/jquery.ui.widget.js"></script>
-	<script src="./lib/jquery.fileupload.js"></script>
-	<script src="./js/app.js"></script>
-	<script src="./js/controllers/fileUploadCtrl.js"></script>
+    <div class="container">
+        <div class="row">
+            <div>
+                <input-upload url="https://upload.wistia.com/?access_token=b6d2c825e76403e4d536620b1c96f156d59a1fb53db6d55e1feddf64cca396a2"></input-upload>
+            </div>
+            <hr>
+            <div>
+                <h1>{{title}}</h1>
+                <ul class="video-list">
+                    <li ng-repeat="video in videos" class="col-md-4">
+                        <span class="wistia_embed wistia_async_{{video.hashed_id}} videoFoam=true playerColor=2c98e3""></span>
+                        <h2 >{{video.name}}</h2>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/angular-sanitize.min.js"></script>
+    <script src="./lib/jquery.iframe-transport.js"></script>
+    <script src="./lib/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery.fileupload.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/directives/inputUpload.js"></script>
+    <script src="./js/controllers/fileUploadCtrl.js"></script>
+    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 </body>
 </html>

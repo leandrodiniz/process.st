@@ -1,0 +1,40 @@
+.select-file{
+	position: relative;
+	overflow: hidden;
+}
+
+.field-holder{
+	margin: 20px 0;
+}
+.field-holder label{
+	display: block;
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.status-content {
+	display: none;
+	margin: 20px 0;
+	background: #f9f9f9;
+	padding: 20px;
+}
+
+.video-list{
+	padding: 0;
+	margin: 30px 0;
+}
+.video-list li{
+	list-style: none;
+}
+
+.select-file input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	opacity: 0;
+	-ms-filter: 'alpha(opacity=0)';
+	font-size: 200px !important;
+	direction: ltr;
+	cursor: pointer;
+}

@@ -1,0 +1,10 @@
+<div ng-transclude class="project-container col-md-12">
+	<div class="col-md-12">
+		<h1>{{name}}</h1>
+		<time>{{created | date:'MMMM dd h:mma'}}</time>
+		<div ng-repeat="media in medias" class="col-md-4">
+			<span class="wistia_embed wistia_async_{{media.hashed_id}} videoFoam=true playerColor=2c98e3""></span>
+			<h2>{{media.name}}</h2>
+		</div>
+	</div>
+</div>

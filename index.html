@@ -15,15 +15,10 @@
             </div>
             <hr>
             <div>
-                <h1>{{title}}</h1>
-                <ul class="video-list">
-                    <li ng-repeat="video in videos" class="col-md-4">
-                        <span class="wistia_embed wistia_async_{{video.hashed_id}} videoFoam=true playerColor=2c98e3""></span>
-                        <h2 >{{video.name}}</h2>
-                    </li>
-                </ul>
-            </div>
-            
+                <div ng-repeat="project in projects | orderBy: 'project.created':true" ng-if="project.mediaCount != 0">
+                    <player-video hashedId="{{project.hashedId}}" name="{{project.name}}" created="{{project.created}}"></player-video>
+                </div>
+            </div>            
         </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -34,6 +29,7 @@
     <script src="./lib/jquery.fileupload.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/directives/inputUpload.js"></script>
+    <script src="./js/directives/playerVideo.js"></script>
     <script src="./js/controllers/fileUploadCtrl.js"></script>
     <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
 </body>

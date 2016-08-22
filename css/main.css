@@ -12,6 +12,16 @@
 	margin: 10px 0;
 }
 
+h1{
+	font-size: 20px;
+	margin: 0;
+	color: #54bbff;
+}
+
+h2{
+	font-size: 16px;
+}
+
 .status-content {
 	display: none;
 	margin: 20px 0;
@@ -37,4 +47,17 @@
 	font-size: 200px !important;
 	direction: ltr;
 	cursor: pointer;
+}
+
+time{
+	display: block;
+	margin-bottom: 20px;
+	font-size: 11px;
+	color: #ccc;
+}
+
+.project-container {
+	border-bottom: 1px solid #f1f1f1;
+	padding: 0 0 20px 0;
+	margin-bottom: 20px;
 }

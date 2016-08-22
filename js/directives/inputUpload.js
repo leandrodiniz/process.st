@@ -18,16 +18,19 @@ angular.module('fileUpload').directive('inputUpload', function () {
                     $('button').on('click', function() {
                         data.submit();
                     });
-                    console.log($scope);
                 },
                 done: function (e, data) {
                     $('.btn-status').hide();
                     var response = JSON.parse(data.jqXHR.responseText);
-                    $scope.$parent.loadVideo();
+                    $scope.$parent.projects = [];
+                    $scope.$parent.loadProjects();
                 },
                 progressall: function (e, data) {
                     var progress = parseInt(data.loaded / data.total * 100, 10);
                     $('.progress-bar').css('width', progress + '%');
+                },
+                fail: function (e, data) {
+                    alert(data.messages.uploadedBytes);
                 }
             });
         }
